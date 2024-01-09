@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row no-gutters">
+        <div class="col-4">
+            <div class="container vertical-scrollable">
+            {% if acciones %}
+                {% for accion in acciones %}
+                    Nombre: {{accion.nombre}}
+                    Identificador: {{accion.identificador|upper}}
+                {% endfor %}
+            {% endif %}
+            </div>
+        <div class="fixed-bottom">
+            hola
+        </div>
+        </div>
+        <div class="col-8">
+        <h1>Hello World</h1>
+        </div>
+    </div>
+{% endblock %}

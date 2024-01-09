@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <br>
+  <h2>Iniciar sesión</h2>
+  <form method="POST" action="{%url 'login'%}">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="lb_username" class="form-label">Nombre de usuario:</label>
+      <input type="text" class="form-control" id="lb_username" name="username" placeholder="Ingresa tu nombre de Usuario">
+    </div>
+    <div class="mb-3">
+      <label for="lb_password1" class="form-label">Contraseña:</label>
+      <input type="password" class="form-control" id="lb_password1" name="password" placeholder="Ingresa tu Contraseña">
+    </div>
+    <button type="submit" class="btn btn-secondary">Enviar</button>
+  </form>
+{% endblock %}
